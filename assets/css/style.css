@@ -1,0 +1,715 @@
+/*----------------------------------
+		Commone Style
+-----------------------------------*/
+/*----------------------------------
+main color: #8D8BCB;
+heading color: #23215b;
+paragraphs color: #faaf11;
+gary color: 575454;
+card para color:575454;
+----------------------------------*/
+
+
+*{
+  margin: 0;
+  padding: 0;
+}
+html {
+  scroll-behavior: smooth;
+}
+@font-face{
+	font-family: Trexos;
+	src: url('../fonts/Trexos.ttf');
+}
+
+
+@font-face{
+	font-family: Caramelia;
+	src: url('../fonts/Caramelia.otf');
+}
+
+@font-face{
+	font-family: BalsamiqSans;
+	src: url('../fonts/BalsamiqSans-Regular.ttf');
+}
+
+body{
+	margin:0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: Caramelia;
+	font-size:18px;
+}
+h1
+{
+
+   color: #fff; 
+   font-size: 60px;
+   font-weight: 900;
+   letter-spacing: 3px;
+   text-transform: capitalize;
+   text-shadow: 0 0 5px #ececec;
+
+}
+h2{
+  color:23215b;
+  font-size: 45px;
+  font-weight: 900;
+  letter-spacing: 3px;
+  text-transform: capitalize;
+  text-shadow: 0 0 5px #000;
+}
+h5{
+  text-shadow: 0 0 5px #000;
+}
+p{
+  font-family: BalsamiqSans;
+}
+.darken-overlay
+{
+    background-color: rgba(253, 188, 239, 0.6);
+    padding: 0;
+}
+/*---------------------------------
+	Section1:	Header & Navbar
+----------------------------------*/
+
+ .school-logo
+{
+    height: 80px;
+    width: 80px;
+    border-radius: 40%;
+}
+.nav-right li
+{
+    margin: 0px 10px;
+}
+.nav-right li a
+{
+    color: #23215b !important; 
+    font-size: 22px;
+    font-weight: 500;
+    text-transform: capitalize;
+    letter-spacing: 0.6px;
+    position: relative;
+}
+.nav-right li a::before {
+    content: '';
+    position: absolute;
+    width: 0px;
+    bottom: 0;
+    left: 0;
+    height: 2px;
+    transition: all 500ms ease;
+    box-sizing: border-box;
+    background-color: #faaf11;
+    margin-left: 8px;
+    
+}
+
+
+.nav-right li a:hover
+{
+    color: #faaf11 !important;
+    text-shadow:  0 0 20px #3f3f3f;
+
+}
+.nav-right li a:hover::before
+{
+    width: 50%;
+}
+.nav-right li a:active{
+    color: #faaf11 !important;
+}
+#home{
+    position: relative;
+    width: 100%;
+}
+
+/* waves part */
+.wave1 {
+    position: absolute;
+    height: 100%;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #9d9bcf;
+    opacity: 0.7;
+    animation: waves 5s ease-in-out infinite;
+    z-index: -1;
+  }
+
+  .wave2 {
+    position: absolute;
+    height: 98%;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #8D8BCB;
+    animation: waves 5.3s ease-in-out infinite;
+    z-index: -1;
+  }
+
+  .wave3 {
+    position: absolute;
+    height: 96%;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #605EA6;
+    
+    animation: waves 5.5s ease-in-out infinite;
+    z-index: -1;
+  }
+  
+  
+  
+  @keyframes waves {
+    0%, 100% {
+      clip-path: polygon(0 8%, 7% 6%, 14% 5%, 21% 5%, 28% 6%, 34% 8%, 40% 12%, 46% 17%, 50% 20%, 54% 23%, 60% 25%, 66% 26%, 70% 26%, 77% 25%, 83% 23%, 89% 21%, 95% 19%, 100% 17%, 100% 100%, 0% 100%);
+    }
+
+  
+ 
+    50% {
+      clip-path: polygon(0 15%, 9% 21%, 14% 23%, 18% 25%, 21% 26%, 30% 28%, 32% 28%, 40% 27%, 46% 26%, 52% 23%, 57% 19%, 62% 15%, 68% 11%, 73% 8%, 79% 6%, 86% 5%, 93% 5%, 100% 6%, 100% 100%, 0% 100%);
+    }
+  }
+
+
+/*---------------------------------
+		Section#2: slider
+----------------------------------*/
+
+.carousel-item img
+{
+    height: 500px;
+    margin: auto;
+    width: auto;
+
+}
+
+
+#home .slider-desc .btn
+{
+    padding: 1rem 3rem;
+    background-color: #FAAF11;
+    color: #fff;
+    font-family: Trexos;
+    letter-spacing: 0.5px;
+    margin-top: 2rem;
+    font-size: 20px;
+    
+}
+#home .slider-desc .btn:hover
+{
+    box-shadow: 0 0 30px #fff, 0 0 5px #ececec;
+}
+
+.home .carousel-control-prev,.home .carousel-control-next
+{
+  width: 5%;
+}
+
+/*---------------------------------
+		section3: Curriculum part
+----------------------------------*/
+
+.title span
+{
+color: #FAAF11;
+font-family: Trexos;
+text-shadow: 0 0 5px #000;
+}
+
+.curriculum .card
+{
+  border: none;
+  transition: all 0.7s;
+}
+
+.curriculum .card-body a 
+{
+ background-color: #FAAF11;
+ color: #fff;
+
+}
+.curriculum .card-body i
+{
+  font-size: 20px;
+}
+.curriculum .card img
+{
+  border: 1px solid rgba(0,0,0,.125);
+  border-radius: .25rem;
+  /* height: 172px; */
+  transition: all .5s;
+}
+.curriculum .card-body p
+{
+  color: #575454;
+}
+.curriculum .card-img
+{
+  position: relative;
+  overflow: hidden;
+  
+}
+.card1.years{background-color: pink;}
+.card2.years{background-color: #51C9EE;}
+.card3.years{background-color: #DF57A8;}
+.card4.years{background-color: #F32C2C;}
+.card .card-img .years
+{
+  position: absolute;
+  left: 50%;
+  top: 100%;
+  opacity: 0;
+  transform: translate(-75px,-75px);
+  
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding-top: 15px;
+  transition: all 0.5s;
+  box-shadow: 0 0 30px #fff, 0 0 5px #ececec;
+  
+}
+.curriculum .card-img:hover .years{
+  
+  opacity: 0.8;
+  
+  
+}
+.curriculum .card-img:hover img{
+  
+  transform: scale(1.2);
+}
+
+.curriculum .card:hover
+{
+  box-shadow:  0 0 20px rgb(85, 81, 81);
+}
+
+
+/*---------------------------------
+		 Section#3: classes
+----------------------------------*/
+.classes
+{
+  background-color: #FAF4EA;
+  
+}
+.swiper-container
+{
+  width: auto;
+  height: 80%;
+  
+}
+.classes .swiper-slide{
+  background-size:cover;
+  font-family: BalsamiqSans;
+  background-color: #fff;
+  border-radius: 5px;
+}
+
+.classes .swiper-slide .swiper-img img
+{
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  width: 100%;
+}
+.classes .swiper-slide .swiper-img{position: relative}
+.classes .class-price
+{
+  background-color: #FAAF11;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  transform: translate(-50%,50%);
+  height: 65px;
+  width: 65px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  transition: all 0.5s;
+  
+}
+
+.swiper-card-shadow{
+  height: 100%;
+  width: 100%;
+  border-radius: 5px;
+  transition: box-shadow 1s;
+  position: relative;
+  overflow: hidden;
+}
+.join-class-btn{
+  font-size: 14px;
+  
+  position: absolute;
+  top: -100px;
+  left: 50%;
+  z-index: 1;
+  transform: translate(-50%,-50%);
+  height: 100px;
+  width: 100px;
+  border-radius: 100%;
+  background-color: #FAAF11;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.7s;
+  opacity: 0.7;
+}
+.join-class-btn a{
+  cursor: pointer;
+  padding-top: 40%;
+  text-decoration: none;
+  
+}
+.join-class-btn a:hover{  text-shadow: 0 0 5px #000;}
+.swiper-card-shadow:hover
+{
+  box-shadow:  0 0 20px rgb(85, 81, 81);
+  
+}
+.swiper-card-shadow:hover .join-class-btn
+{
+  top:0
+}
+.swiper-slide:hover .class-price
+{
+  background-color: #51C9EE;
+}
+.swiper-details ul
+{
+  list-style-type: none;
+display: flex;
+justify-content: space-around;
+border-top: 3px solid #F8F8F8;
+padding-top: 15px;
+}
+.swiper-details p
+{
+  color: #66717a;
+  font-size: 16px;
+  font-weight: 400;
+}
+.swiper-details ul li
+{
+  padding-left:30px;
+  margin: 5px 0;
+  border-left: 3px solid #F8F8F8;
+  font-size: 16px;
+  display: flex;
+  flex-direction: column;
+}
+.swiper-details ul :first-child{border: none;
+padding: 0;}
+
+
+/*---------------------------------
+		 Section#3: stuff
+----------------------------------*/
+
+.stuff .card{
+  position: relative;
+}
+.stuff .stuff-contacts
+{
+  position: absolute;
+  
+  bottom: 0;
+  left: 0;
+  right: 0;
+  
+  background-color: rgba(0,0,0,0.6);
+  padding: 2px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 0;
+  visibility: hidden;
+  opacity: 0;
+  transition: all ease 0.8s;
+  border-radius: 3px;
+  box-shadow:  0 0 10px #000;
+}
+
+.stuff .stuff-contacts a
+{
+  color: #FAAF11;
+  padding: 0 10px;
+}
+
+.stuff .stuff-contacts a:hover
+{
+  text-shadow: 0 0 10px #fff;
+}
+
+.stuff .card:hover
+{
+  box-shadow: 0 0 30px #fff, 0 0 5px #ececec;
+
+}
+
+.stuff .card:hover .stuff-contacts
+{
+  height: 100%;
+  visibility: visible;
+  opacity: 1;
+}
+/*---------------------------------
+		 Section: counter
+----------------------------------*/
+.counter{
+  font-size: 24px;
+  color: #23215B;
+  background-color: #FAF4EA;
+}
+
+.counter .ico-circle i
+{
+  font-size: 70px;
+  color: #FAAF11;
+  text-shadow:0 0 50px #000;
+}
+
+.counter-box p
+{
+  padding: 20px 0 0 0;
+}
+
+.counter-text{
+  font-family: BalsamiqSans;
+
+}
+
+/*---------------------------------
+		 Section#3: testimonials
+----------------------------------*/
+.testimonials
+{
+  background-image: url(../images/parents.jpg);
+  background-size: cover;
+  background-position: bottom;
+  background-attachment: fixed;
+  
+
+}
+
+
+
+/*---------------------------------
+	Section#4:	contact-us
+----------------------------------*/
+.contact-us{background-image: url(../images/joinus-bg.jpg);
+background-attachment: fixed;
+}
+.contact-us, .contact-us h2
+{
+  
+  color: #fff;
+  text-shadow: 0 0 20px #fff;
+}
+
+
+
+
+
+
+/*---------------------------------
+		          Footer
+----------------------------------*/
+
+.footer .footer-top 
+{
+  font-family: BalsamiqSans;
+  font-size: 16px;
+  padding: 5rem 0;
+  color: gray;
+  
+}
+.hr-footer-line
+{
+  padding-bottom: 3rem;
+  border-bottom: 1px solid #ececec;
+}
+/* .footer .footer-bottom .container
+{
+  border-top: 1px solid #ececec;
+} */
+.footer .footer-top h6
+{
+  font-size: 18px;
+  padding: 1rem 0;
+}
+.footer-top-first-br,.footer-top-second-br,.footer-top-third-br
+{
+  border-right: 1px solid #ececec;
+}
+
+.Openning-hours p,h6{
+  color: #23215b;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.footer-bg
+{
+  margin: 0;
+  padding: 0;
+}
+
+.footer-bottom .footer-copy-right 
+{
+   
+    font-family: 'Open Sans',arial;
+    color: #797979;
+    font-size: 15px;
+
+}
+
+
+.footer-icons a
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    background-color: #484540;
+    color: #f7ce78;
+    height: 60px;
+    width: 60px;
+    line-height: 60px;
+    font-size: 24px;
+    border-radius: 100%;
+    cursor: pointer;
+    margin: 0.3rem;
+    transition: all 0.5s;
+}
+.footer-icons a:hover
+{
+
+color: #fff;
+font-size: 25px;
+}
+
+.footer-icons .icon-facebook:hover
+{
+background-color: #3B5998;
+
+}
+
+ .footer-icons .icon-instagram:hover
+{
+background-color: #125688;
+
+}
+
+ .footer-icons .icon-tumblr:hover
+{
+background-color: #32506D;
+
+}
+ .footer-icons .icon-twitter:hover
+{
+background-color: #00ACED;
+
+}
+
+.copy-rights span
+{
+  color: gray;
+  font-weight: 600;
+}
+
+/*---------------------------------
+		media query part
+----------------------------------*/
+
+
+
+/* // Extra small devices (portrait phones, less than 576px) */
+@media (max-width: 575.98px) { 
+  .wave1,.wave2,.wave3{
+    display: none;
+  }
+  #home{
+    background-color: #605EA6 ;
+   
+  }
+  .footer-top-third-br
+  {
+    border: none;
+  } 
+
+  .footer-top-second-br
+  {
+    border: none;
+  } 
+  
+  .footer-top-first-br
+  {
+    border: none;
+  } 
+
+  .footer-top .container
+  {
+    border-bottom: 1px solid #ececec;
+  }
+  
+ }
+
+/* // Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) and (max-width: 767.98px) { 
+  .wave1,.wave2,.wave3{
+    display: none;
+  }
+  #home{
+    background-color: #605EA6 ;
+
+  }
+  .footer-top-third-br
+  {
+    border: none;
+  } 
+  .footer-top-second-br
+  {
+    border: none;
+  } 
+  
+  .footer-top-first-br
+  {
+    border: none;
+  } 
+
+  .footer-top .container
+  {
+    border-bottom: 1px solid #ececec;
+  }
+ }
+
+/* // Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) and (max-width: 991.98px) { 
+.footer-top-second-br
+{
+  border: none;
+}
+ }
+
+/* // Large devices (desktops, 992px and up) */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  
+    
+/* // Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) { 
+
+
+ }
